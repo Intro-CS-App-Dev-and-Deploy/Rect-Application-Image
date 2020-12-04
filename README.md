@@ -23,8 +23,8 @@ Using rect() to draw an image to the Canvas
   - Note the presentation as square, landscape, or portrait
 - Create Aspect Ratios based on matching or mismatched presentation of rectangle and image
   - See `flatMutlipleImage.pde` exemplar for explanation
-  - Longest dimension should = 1
-  - Shorter dimension should < 1
+  - Longest dimension should = 1 (similar to CSS, style="width:100%")
+  - Shorter dimension should < 1 (similar to CSS, style="height:auto")
 - Identify the image dimension that remains the same
 - Identify the image dimension that becomes smaller
 - CAUTION: if drawing an image into a rectangle and a dimension doesn't fit, either resize the image with an online tool or layer a piece of visual data overtop to hide the part of the image "spilling over the rectangle"
