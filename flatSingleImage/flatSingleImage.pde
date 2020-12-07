@@ -11,6 +11,8 @@ imageStartWidth = width*0;
 imageStartHeight = height*0;
 imageWidth = width*imageWidthRatio; //Aspect Ratio
 imageHeight = width*imageHeightRatio; //Aspect Ratio
+//Basic Error: Image must be smaller than the Canvas or Display
+if ( imageWidth > width ) println("ERROR: Image is too wide");
 if (imageHeight > height) println("Image display issues");
 //
 //rect(imageStartWidth, imageStartHeight, imageWidth, imageHeight); //Presentation is landscape
