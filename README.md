@@ -7,6 +7,8 @@ Using rect() to draw an image to the Canvas
 - What is the arithmetic of aspect ratio?
 - How do I code this into variables
 
+Note: demonstrate Aspect Ratio in WORD with Image Corners and what returns
+
 ## Expectations
 - Display an image in a rectangle
   - Example One: in a canvas
