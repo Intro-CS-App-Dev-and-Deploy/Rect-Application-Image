@@ -1,6 +1,7 @@
 // Notice Aspect Ratio ensures missing part on bottom
 // Problem that must be solved with other design aspects
 //
+//Variables
 PImage pic1, pic2;
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float picImageWidthRatio1, picImageHeightRatio1;
@@ -10,10 +11,12 @@ float picImageWidthRatio2, picImageHeightRatio2;
 float picX2, picY2, picWidth2, picHeight2;
 color red=#FF0004; //Show where image is too short
 //
+//Geometry
 size(900, 680); //fullScreen(), displayWidth & displayHeight //Landscape presentation
 // Note: height-700 will be slightly too big for first image, thus will need other GUI Design
 // height-600 will make image spill over, height-900 will make both images spill over
 //
+//Populating Variables
 pic1 = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimension: 800 Width, 600 Height
 //pic1 is origonally landscape
 pic2 = loadImage("bike.jpg"); //Dimension: 860 Width, 529 Height //bike.jpg is landscape presentation
@@ -42,6 +45,7 @@ picWidth2 = rectWidthPic2 * picImageWidthRatio2; //remains longer side, "*1"
 picHeight2 = picWidth2 * picImageHeightRatio2; //becomes shorter side, "*<1"
 if (picHeight2 > rectHeightPic2) println("Image #2 display issues"); //dimension might be 'cut-off'
 //
+//Rectangle Layout & Image Printing to Canvas
 fill(red);
 rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Landscape Presentation
 image(pic1, picX1, picY1, picWidth1, picHeight1);
