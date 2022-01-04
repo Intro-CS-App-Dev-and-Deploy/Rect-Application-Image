@@ -20,6 +20,9 @@ Note: demonstrate Aspect Ratio in WORD with Image Corners and what returns
   - Refer to https://processing.org/reference/image_.html for updates (last accessed 20201104)
 - Draw a rectangle to the Canvas
   - Note the presentation as square, landscape, or portrait
+  - Fill the background with colour (i.e. red) so visual debugging if image aspect ratio is too small
+  - [OPTION] Able to use Single-Line-IF to return issue, illustrated below
+  - [Advanced Option]: using IF to trigger self-correcting aspect ratio (beyond CS10)
 - Inspect the image for geometry
   - Image File & Right-Mouse-Click / Properties / Details / Record width and height as comment
   - Note the presentation as square, landscape, or portrait
