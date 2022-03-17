@@ -8,7 +8,7 @@ size(600, 300); //fullScreen(), displayWidth & displayHeight //Square, Landscape
 //
 //Variable Population
 pic = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimension: 800 Width, 600 Height
-imageWidthRatio = 800.0/800.0; //must be decmals due to float, larger # for aspect ratio, similar to style="width:100%"
+imageWidthRatio = float ( width/width ) ; //must be decmals due to float, larger # for aspect ratio, similar to style="width:100%"
 imageHeightRatio = 600.0/800.0; //must be decmals due to float, <1 for aspect ratio, similar to style="height:auto"
 imageStartWidth = width*0;
 imageStartHeight = height*0;
