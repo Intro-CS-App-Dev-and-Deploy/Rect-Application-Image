@@ -3,7 +3,7 @@
  */
 //
 //Global Variables
-float imageX, imageY, imageWidth, imageHeigth, imageWidthRatio=0.0, imageHeightRatio=0.0;
+float imageX, imageY, imageWidth, imageHeight, imageWidthRatio=0.0, imageHeightRatio=0.0;
 float largerDimension, smallerDimension;
 PImage pic;
 Boolean widthLarger=false, heightLarger=false;
@@ -15,17 +15,18 @@ pic = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimesions: wid
 //Alogrithm: Find the larger dimension for aspect ration (comparison of two numbers)
 int picWidth = 800; //Mine is 800, do not copy this!!!
 int picHeight = 600; //Mine is 600, do not copy this!!!
-if ( picWidth >= picHeight ) {
+if ( picWidth >= picHeight ) { //True, if Landscape or Square
   largerDimension = picWidth;
   smallerDimension = picHeight;
   widthLarger = true;
-} else {
+} else { //False, if Portrait
   largerDimension = picHeight;
   smallerDimension = picWidth;
   heightLarger = true;
 }//End Dimension Comparision
 println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifying Variable details
 //Note: single line IFs can be summarized to IF-ELSE or IF-ELSEIF-ELSE
+//Computer chooses which formulae to execute
 if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
 if ( widthLarger == true ) imageHeightRatio = smallerDimension / largerDimension;
 if ( heightLarger == true ) imageHeightRatio = largerDimension / largerDimension;
@@ -38,11 +39,11 @@ println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 600
 imageX = width*0;
 imageY = height*0;
 imageWidth = width*imageWidthRatio;
-imageHeigth = height*imageHeightRatio;
+imageHeight = height*imageHeightRatio;
 if ( imageWidth > width ) println("ERROR: Image is too wide"); //Simple Display Checker
-if ( imageHeigth > height ) println("ERROR: Image is too high"); //Simple Display Checker
+if ( imageHeight > height ) println("ERROR: Image is too high"); //Simple Display Checker
 
 //
 //Rectangle Layout
-rect(imageX, imageY, imageWidth, imageHeigth);
-image(pic, imageX, imageY, imageWidth, imageHeigth);
+rect(imageX, imageY, imageWidth, imageHeight);
+image(pic, imageX, imageY, imageWidth, imageHeight);
