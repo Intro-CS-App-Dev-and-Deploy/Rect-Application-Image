@@ -1,20 +1,3 @@
-//Image Flow
-//
-//Global Variables
-//
-//Geometry: display and orientation (landscape, portrait, and square)
-//
-//Population
-// 
-//Aspect Ratio Calculations
-//
-//Rectangle Layout and Image Drawing to Canvas
-//
-//End Program
-
-
-
-
 /*Note: better aspect ratio algorithms exist ...
  can you figure one out?
  */
@@ -25,7 +8,9 @@ float largerDimension, smallerDimension;
 PImage pic;
 Boolean widthLarger=false, heightLarger=false;
 //
+//Geometry: display and orientation (landscape, portrait, and square)
 size(1000, 800); //fullScreen; displayWidth, displayHeight
+//
 //Population
 pic = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimesions: width 800, height 600
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
@@ -42,6 +27,8 @@ if ( picWidth >= picHeight ) { //True, if Landscape or Square
   heightLarger = true;
 }//End Dimension Comparision
 println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifying Variable details
+//
+//Aspect Ratio Calculations
 //Note: single line IFs can be summarized to IF-ELSE or IF-ELSEIF-ELSE
 //Computer chooses which formulae to execute
 if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
@@ -59,8 +46,9 @@ imageWidth = width*imageWidthRatio;
 imageHeight = height*imageHeightRatio;
 if ( imageWidth > width ) println("ERROR: Image is too wide"); //Simple Display Checker
 if ( imageHeight > height ) println("ERROR: Image is too high"); //Simple Display Checker
-
 //
-//Rectangle Layout
+//Rectangle Layout and Image Drawing to Canvas
 rect(imageX, imageY, imageWidth, imageHeight);
 image(pic, imageX, imageY, imageWidth, imageHeight);
+//
+//End Program
