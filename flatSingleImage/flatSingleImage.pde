@@ -1,3 +1,20 @@
+//Image Flow
+//
+//Global Variables
+//
+//Geometry: display and orientation (landscape, portrait, and square)
+//
+//Population
+// 
+//Aspect Ratio Calculations
+//
+//Rectangle Layout and Image Drawing to Canvas
+//
+//End Program
+
+
+
+
 /*Note: better aspect ratio algorithms exist ...
  can you figure one out?
  */
