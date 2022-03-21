@@ -74,5 +74,12 @@ Aspect Ratio retains original presentation of Image
 
 # To Include
 
+Algorithms - Single image
+
+Algorithms - Two images
+
+Algorithms - Dynamic images
+
+Bugs: if ratio is bigger, then good. If ratio is smaller, not good, must be adjusted.
 
 ---
