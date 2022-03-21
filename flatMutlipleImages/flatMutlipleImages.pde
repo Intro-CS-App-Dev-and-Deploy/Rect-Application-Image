@@ -12,7 +12,7 @@ float picX2, picY2, picWidth2, picHeight2;
 color red=#FF0004; //Show where image is too short
 //
 //Geometry
-size(900, 680); //fullScreen(), displayWidth & displayHeight //Landscape presentation
+size(900, 680); //fullScreen(), displayWidth & displayHeight //Landscape presentation, not square or protrait
 // Note: height-700 will be slightly too big for first image, thus will need other GUI Design
 // height-600 will make image spill over, height-900 will make both images spill over
 //
