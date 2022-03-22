@@ -5,7 +5,7 @@ PImage pic1, pic2;
 color red=#FF0000;
 //
 //Geometry
-size(900, 680); //fullScreen(); displayWidth, displayHeight
+size(900, 800); //fullScreen(); displayWidth, displayHeight
 //Landsacpe Presentation, not square or protrait
 //
 //Populating Variables
@@ -74,8 +74,8 @@ pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
 //
 //Rectangle Layout & Image Printing on Canvas
 fill(red);
-//rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
+rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
-//image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
-image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Debug this
-//image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); //debug this
+image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+//image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Debug this
+image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); //debug this
