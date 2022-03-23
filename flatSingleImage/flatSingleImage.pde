@@ -12,7 +12,7 @@ Boolean widthLarger=false, heightLarger=false;
 size(1000, 800); //fullScreen; displayWidth, displayHeight
 //
 //Population
-pic = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimesions: width 800, height 600
+pic = loadImage("../Images Used/Landscape & Square Images/Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimesions: width 800, height 600
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Alogrithm: Find the larger dimension for aspect ration (comparison of two numbers)
 int picWidth = 800; //Mine is 800, do not copy this!!!
@@ -42,13 +42,20 @@ println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 600
 //Ratio "0.75" similar to style="height:auto" (websites)
 imageX = width*0;
 imageY = height*0;
-imageWidth = width*imageWidthRatio;
-imageHeight = height*imageHeightRatio;
+imageWidth = width;
+imageHeight = height;
+//
+//Adjusted Image Variables for Aspect Ratio
+float picWidthAdjusted, picHeightAdjusted;
+picWidthAdjusted = float (width) * imageWidthRatio;
+picHeightAdjusted = float (height) * imageHeightRatio;
+println(picWidth, imageWidthRatio, width, picWidthAdjusted, picHeight, imageHeightRatio, height, picHeightAdjusted);
 if ( imageWidth > width ) println("ERROR: Image is too wide"); //Simple Display Checker
 if ( imageHeight > height ) println("ERROR: Image is too high"); //Simple Display Checker
 //
 //Rectangle Layout and Image Drawing to Canvas
 rect(imageX, imageY, imageWidth, imageHeight);
-image(pic, imageX, imageY, imageWidth, imageHeight);
+//image(pic, imageX, imageY, imageWidth, imageHeight);
+image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
 //
 //End Program

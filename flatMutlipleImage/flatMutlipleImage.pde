@@ -2,15 +2,14 @@
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
 PImage pic1, pic2;
-color red=#FF0000;
 //
 //Geometry
-size(900, 800); //fullScreen(); displayWidth, displayHeight
+size(900, 680); //fullScreen(); displayWidth, displayHeight
 //Landsacpe Presentation, not square or protrait
 //
 //Populating Variables
-pic1 = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimensions: 800 width, 600 height
-pic2 = loadImage("bike.jpg"); //Dimensions: 860 width, 529 height
+pic1 = loadImage("../Images Used/Landscape & Square Images/Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimensions: 800 width, 600 height
+pic2 = loadImage("../Images Used/Landscape & Square Images/bike.jpg"); //Dimensions: 860 width, 529 height
 //
 //Aspect Ration Calculations
 int pic1Width = 800; //NOTE: mine not yours
@@ -51,9 +50,8 @@ if ( widthPic2Larger == true ) imageHeightRatioPic2 = float (smallerPic2Dimensio
 if ( heightPic2Larger == true ) imageWidthRatioPic2 = float (smallerPic2Dimension) / float (largerPic2Dimension);
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float (largerPic2Dimension) / float (largerPic2Dimension);
 println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
-
 //
-// **CONTINUE HERE: use ratios to change the image width and height properties
+// Use ratios to change the image width and height properties of Rectangle
 // **See below to Specific Image Properties of Image and Rectangle Variables
 //
 rectXPic1 = width*1/4;
@@ -65,17 +63,27 @@ rectYPic2 = height*1/2;
 rectWidthPic2 = width*6/8;
 rectHeightPic2 = height*1/2;
 //
-//Adjusted widths and heights to rectangle layouts
+// Final Aspect Ratio Calculations
 float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
 pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
 pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
 pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
 pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println (pic1Width, pic1Height, pic2Width, pic2Height);
+println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
+//
 //
 //Rectangle Layout & Image Printing on Canvas
+color red=#FF0000;
 fill(red);
-rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
+//rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
+// Image using Rect() Variables
+//image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
+//image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+// Change the Rect() Variables to Aspect Ratio
 image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
-//image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Debug this
-image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted); //debug this
+println ("Image one looks good, put some text underneath to fill in the space."); //Great Design Change for Aspect Ratio
+//image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
+//Center image in rect(), pic2, by changing the yRect() value
+image(pic2, rectXPic2, rectYPic2+(rectYPic2*1/5), pic2WidthAdjusted, pic2HeightAdjusted);
