@@ -1,19 +1,5 @@
-//Global Variables
-float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
-float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
-PImage pic1, pic2;
-
-float imageWidthRatioPic1=0.0, imageHeightRatioPic1=0.0, imageWidthRatioPic2=0.0, imageHeightRatioPic2=0.0; 
-Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
-int largerPic1Dimension, smallerPic1Dimension, largerPic2Dimension, smallerPic2Dimension;
-float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
-color red=#FF0000;
-//
-void setup()
+void populatingVariables()
 {
-  size(900, 680); //fullScreen(); displayWidth, displayHeight
-  //Landsacpe Presentation, not square or protrait
-  //
   //Populating Variables
   pic1 = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimensions: 800 width, 600 height
   pic2 = loadImage("bike.jpg"); //Dimensions: 860 width, 529 height
@@ -77,44 +63,4 @@ void setup()
   pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
   println (pic1Width, pic1Height, pic2Width, pic2Height);
   println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
-}//End setup
-//
-void draw()
-{ //Note: DRAW Loop repeats 60 times / second, static images should be in SETUP, "system resourses"
-  //Rectangle Layout & Image Printing on Canvas
- fill(red);
- //rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
- rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
- // Image using Rect() Variables
- //image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
- //image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
- // Change the Rect() Variables to Aspect Ratio
- image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
- println ("Image one looks good, put some text underneath to fill in the space."); //Great Design Change for Aspect Ratio
- //image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
- //Center image in rect(), pic2, by changing the yRect() value
- image(pic2, rectXPic2, rectYPic2+(rectYPic2*1/5), pic2WidthAdjusted, pic2HeightAdjusted);
-}//End draw
-//
-void keyPressed()
-{
-}//End keypressed
-//
-void mousePressed()
-{
-}//End mousePressed
-
-/*
-
- 
- //
- 
- 
- 
- 
- //
- 
- //
- //
- 
- */
+}//End populatingVariables
