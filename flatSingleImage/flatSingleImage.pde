@@ -42,8 +42,8 @@ println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 600
 //Ratio "0.75" similar to style="height:auto" (websites)
 imageX = width*0;
 imageY = height*0;
-imageWidth = width;
-imageHeight = height;
+imageWidth = width-1; //CANVAS (0,0) means point doesn't match to rectangle, missing outline on two sides
+imageHeight = height-1;
 //
 //Adjusted Image Variables for Aspect Ratio
 float picWidthAdjusted, picHeightAdjusted;
