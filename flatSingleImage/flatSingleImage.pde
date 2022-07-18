@@ -25,7 +25,7 @@ if ( picWidth >= picHeight ) { //True, if Landscape or Square
   largerDimension = picHeight;
   smallerDimension = picWidth;
   heightLarger = true;
-}//End Dimension Comparision
+}//End Image Dimension Comparision
 println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifying Variable details
 //
 //Aspect Ratio Calculations
