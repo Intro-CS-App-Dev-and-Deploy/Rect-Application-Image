@@ -54,7 +54,7 @@ if ( imageWidth > width ) println("ERROR: Image is too wide"); //Simple Display 
 if ( imageHeight > height ) println("ERROR: Image is too high"); //Simple Display Checker
 //
 //Rectangle Layout and Image Drawing to Canvas
-rect(imageX, imageY, imageWidth, imageHeight);
+rect(imageX, imageY, imageWidth, imageHeight); //Background image
 //image(pic, imageX, imageY, imageWidth, imageHeight);
 image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
 //
