@@ -1,3 +1,5 @@
+//Note: try to write for arrays: alphaNumeric naming
+//
 //Global Variables
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
