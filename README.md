@@ -83,3 +83,5 @@ Algorithms - Dynamic images
 Bugs: if ratio is bigger, then good. If ratio is smaller, not good, must be adjusted.
 
 ---
+
+Use Google Questions to have students summarize this code in their own words
