@@ -61,12 +61,12 @@ void populatingVariables()
   //
   rectXPic1 = width*1/4;
   rectYPic1 = height*0;
-  rectWidthPic1 = width*1/2;
-  rectHeightPic1 = height*1/2;
+  rectWidthPic1 = (width-1)*1/2;
+  rectHeightPic1 = (height-1)*1/2;
   rectXPic2 = width*1/8;
   rectYPic2 = height*1/2;
-  rectWidthPic2 = width*6/8;
-  rectHeightPic2 = height*1/2;
+  rectWidthPic2 = (width-1)*6/8;
+  rectHeightPic2 = (height-1)*1/2;
   //
   // Final Aspect Ratio Calculations
   pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
