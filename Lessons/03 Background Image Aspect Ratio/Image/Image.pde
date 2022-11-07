@@ -1,6 +1,11 @@
 //To Do, add the printlns to verify the values
 //Algorithm works when image is bigger than the CANVAS, not smaller
 //Different Algorithm is necessary - work to get above 65%
+//Larger Dimension needs to be compared to same CANVAS Dimension
+//If same or larger, ok, if smaller, note that algorithm will not work
+//Calculated smaller dimension must be equal to or smaller as well
+//Larger calculated dimension will not show everything
+//
 //
 //Global Variables
 int appWidth, appHeight;
