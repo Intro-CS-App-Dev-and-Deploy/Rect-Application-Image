@@ -18,6 +18,6 @@ backgroundImageHeight = appHeight-1;
 //Rectangular Layout and Image Drawing to CANVAS
 rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
 //
-tint(255, 50); //use 1/2 tint value for white (i.e. 128/256=1/2)
-//tint(128, 128, 50); //Night Mode
+tint(255, 50); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
+//tint(128, 128, 50); //RGB: Night Mode
 image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
