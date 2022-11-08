@@ -31,10 +31,10 @@ println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifyi
 //Aspect Ratio Calculations
 //Note: single line IFs can be summarized to IF-ELSE or IF-ELSEIF-ELSE
 //Computer chooses which formulae to execute
-if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
+if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension; //streches width into larger CANVAS
 if ( widthLarger == true ) imageHeightRatio = smallerDimension / largerDimension;
 if ( heightLarger == true ) imageHeightRatio = largerDimension / largerDimension;
-if ( heightLarger == true ) imageWidthRatio = smallerDimension / largerDimension;
+if ( heightLarger == true ) imageWidthRatio = smallerDimension / largerDimension; //streches height into larger CANVAS
 println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension, 600.0/800.0); //Verify variable values
 //Note: println() also verifies decimal places, compiler will truncate
 //Answers must be 1.0 and between 0 & 1 (decimal)
