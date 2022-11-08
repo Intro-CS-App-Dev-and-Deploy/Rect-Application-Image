@@ -1,4 +1,10 @@
 
+Lessons should begin with flowcharts of larger dimension image stretch and shrinking
+
+
+
+
+
 Image stretch to the backgroun is one algorithm
 
 Image inside rectangles would be shrinking algorithm
