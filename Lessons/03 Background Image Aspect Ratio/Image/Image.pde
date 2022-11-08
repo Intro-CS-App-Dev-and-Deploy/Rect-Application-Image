@@ -38,9 +38,10 @@ if ( picWidth >= picHeight ) { //True if Landscape or Square
 //Ratio 1.0 similar to style="width:100%" (websites)
 //Ratio "0.75" similar to style="height:auto" (websites)
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
-//Better Iamge Stretch Algorithm
+//Better Image Stretch Algorithm
+//We know the width is the larger dimension
 if ( appWidth >= picWidth ) {
-  picWidthAdjusted = picWidth;
+  picWidthAdjusted = appWidth;
   //
   if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
   if ( heightLarger == true ) imageWidthRatio = smallerDimension / largerDimension;
