@@ -35,7 +35,7 @@ void setup()
   float imageWidthRatio=0.0, imageHeightRatio=0.0;
   //Better Image Stretch Algorithm, smaller image to larger CANVAS
   if ( appWidth >= picWidth ) {
-    picWidthAdjusted = appWidth;
+    picWidthAdjusted = appWidth; //Stretching larger dimension
     //
     if ( widthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
     //
@@ -49,15 +49,17 @@ void setup()
       }
     } else {
       //Image smaller than CANVAS needs separate algorithm
+      println("CANVAS is smaller than Image"); //Known bug
     }
   } else {
     //Image smaller than CANVAS needs separate algorithm
+    println("CANVAS is smaller than Image"); //Known bug
   }
   //
   //Verifying Variable Values after algoroithm
   println("App Width:", appWidth, " and App Height:", appHeight);
-  println("Larger Image dimension is:", largerDimension);
   println("Image dimensions are:", picWidth, picHeight);
+  println("Larger Image dimension is:", largerDimension);
   println("Adjusted Image dimesnions are (stretch is goal):", picWidthAdjusted, picHeightAdjusted);
   //
   //Population
@@ -92,13 +94,14 @@ void mousePressed() {
   //Mouse Pressed will control background image
   if (mouseButton == LEFT) {
     nightMode = true;
-    tint(255, 50); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
+    tint(64, 64, 40); //RGB: Night Mode
     image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
+    
     //
   }
   if (mouseButton == RIGHT) {
     nightMode = false;
-    tint(64, 64, 40); //RGB: Night Mode
+    tint(255, 50); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
     image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
   }
 }//End mousePressed
