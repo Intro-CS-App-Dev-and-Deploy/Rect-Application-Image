@@ -90,18 +90,19 @@ void keyPressed() {
 //
 void mousePressed() {
   //  
-  //Mouse Pressed will control background image
-  if ( mouseButton == LEFT) {
-    nightMode = true;
-    rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
-    tint(64, 64, 40, 85); //RGB: Night Mode
-    image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
-  }
-  if ( mouseButton == RIGHT ) {
+    //Mouse Pressed will control background image
+  if (mouseButton == LEFT) {
     nightMode = false;
     rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
-    tint(255, 50); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
-    image(pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
+    tint(tintDayMode, tintDayModeOpacity); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
+    image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
+    //
+  }
+  if (mouseButton == RIGHT) {
+    nightMode = true;
+    rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+    tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity); //RGB: Night Mode
+    image( pic, backgroundImageX, backgroundImageY, picWidthAdjusted, picHeightAdjusted);
   }
 }//End mousePressed
 //
