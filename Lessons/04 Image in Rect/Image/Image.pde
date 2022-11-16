@@ -24,11 +24,12 @@ void setup()
   //Image Dimensions for Aspect Ratio
   //Obi-wan-star-wars-jedi-23864621-800-600.jpg
   //Note: Dimensions are found in the image file / Right Click / Properties / Details
-  int picWidth = 800;
+  //Image meta data can be automatically populated using metadata codes
+  int picWidth = 800; //Obi image
   int picHeight = 600;
-  int picWidth2 = 860;
+  int picWidth2 = 860; //Bike image
   int picHeight2 = 529;
-  //int picWidth3 = 325;
+  //int picWidth3 = 325; //Darth image
   //int picHeight3 = 485;
   //
   //Image Orientation: Landscape, Square, Portrait
