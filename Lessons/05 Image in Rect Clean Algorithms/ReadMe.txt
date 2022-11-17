@@ -2,6 +2,8 @@
 Note: too many old algorithms in here
 Note: break the variables to match arrays and redo all variable references, starting in picWidth & picHeight
 
+Note: adjusted and calcaulted variables are explained for the algorithm only
+
 Clean this up to see only one algorithm
 - Start with Rectangle Layouts
 - Image()

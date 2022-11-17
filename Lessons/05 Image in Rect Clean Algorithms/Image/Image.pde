@@ -1,10 +1,11 @@
 //Global Variables
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
-float picWidthAdjusted1=0.0, picHeightAdjusted1=0.0;
-float picWidthAdjusted2=0.0, picHeightAdjusted2=0.0;
-float picWidthAdjusted3=0.0, picHeightAdjusted3=0.0;
-float topHalfX, topHalfY, topHalfWidth, topHalfHeight;
+float picWidthAdjusted1=0.0, picHeightCalculated1=0.0; //Explained for Algorithm only
+float picWidthAdjusted2=0.0, picHeightCalculated2=0.0; //Explained for Algorithm only
+float picWidthCalculated3=0.0, picHeightAdjusted3=0.0; //Explained for Algorithm only
+float picWidthCalculated1=0.0, picWidthCalculated2=0.0, picHeightCalculated3=0.0; //Unused for Algorithm Copying only
+float topHalfX, topHalfY, topHalfWidth, topHalfHeight; 
 float bottomHalfX, bottomHalfY, bottomHalfWidth, bottomHalfHeight;
 PImage pic1, pic2, pic3;
 Boolean nightMode=false;
@@ -57,46 +58,70 @@ void setup()
     largerDimension1 = picWidth1;
     smallerDimension1 = picHeight1;
     //
-    picWidthAdjusted1 = backgroundImageWidth; //from rect() layout
+    picWidthAdjusted1 = backgroundImageWidth; //from rect() layout //stretch or reduce
     imageHeightRatio1 = smallerDimension1 / largerDimension1;
-    picHeightAdjusted1 = picWidthAdjusted1 * imageHeightRatio1;
+    picHeightCalculated1 = picWidthAdjusted1 * imageHeightRatio1;
+    if ( int (picHeightCalculated1) > int (backgroundImageHeight) ) { //Error Catch
+      println("STOP: image background height is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   } else { //False if Portrait
     largerDimension1 = picHeight1;
     smallerDimension1 = picWidth1;
     //
-    picHeightAdjusted1 = backgroundImageHeight; //from rect() layout
+    picHeightCalculated1 = backgroundImageHeight; //from rect() layout //stretch or reduce
     imageWidthRatio1 = smallerDimension1 / largerDimension1;
-    picWidthAdjusted1 = picHeightAdjusted1 * imageWidthRatio1;
+    picWidthAdjusted1 = picHeightCalculated1 * imageWidthRatio1;
+    if ( int (picWidthCalculated1) > int (backgroundImageWidth) ) { //Error Catch
+      println("STOP: image background width is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   }
   if ( picWidth2 >= picHeight2 ) { //True if Landscape or Square
     largerDimension2 = picWidth2;
     smallerDimension2 = picHeight2;
     //
-    picWidthAdjusted2 = topHalfWidth; //from rect() layout
+    picWidthAdjusted2 = topHalfWidth; //from rect() layout //stretch or reduce
     imageHeightRatio2 = smallerDimension2 / largerDimension2;
-    picHeightAdjusted2 = picWidthAdjusted2 * imageHeightRatio2;
+    picHeightCalculated2 = picWidthAdjusted2 * imageHeightRatio2;
+    if ( int (picHeightCalculated2) > int (topHalfHeight) ) { //Error Catch
+      println("STOP: image 2 height is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   } else { //False if Portrait
     largerDimension2 = picHeight2;
     smallerDimension2 = picWidth2;
     //
-    picHeightAdjusted2 = topHalfHeight; //from rect() layout
+    picHeightCalculated2 = topHalfHeight; //from rect() layout //stretch or reduce
     imageWidthRatio2 = smallerDimension2 / largerDimension2;
-    picWidthAdjusted2 = picHeightAdjusted2 * imageWidthRatio2;
+    picWidthAdjusted2 = picHeightCalculated2 * imageWidthRatio2;
+    if ( int (picWidthCalculated2) > int (topHalfWidth) ) { //Error Catch
+      println("STOP: image 2 width is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   }
   if ( picWidth3 >= picHeight3 ) { //True if Landscape or Square
     largerDimension3 = picWidth3;
     smallerDimension3 = picHeight3;
     //
-    picWidthAdjusted3 = bottomHalfWidth; //from rect() layout
+    picWidthCalculated3 = bottomHalfWidth; //from rect() layout //stretch or reduce
     imageHeightRatio3 = smallerDimension3 / largerDimension3;
-    picHeightAdjusted3 = picWidthAdjusted3 * imageHeightRatio3;
+    picHeightAdjusted3 = picWidthCalculated3 * imageHeightRatio3;
+    if ( int (picHeightCalculated3) > int (bottomHalfHeight) ) { //Error Catch
+      println("STOP: image 3 height is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   } else { //False if Portrait
     largerDimension3 = picHeight3;
     smallerDimension3 = picWidth3;
     //
-    picHeightAdjusted3 = bottomHalfHeight; //from rect() layout
+    picHeightAdjusted3 = bottomHalfHeight; //from rect() layout //stretch or reduce
     imageWidthRatio3 = smallerDimension3 / largerDimension3;
-    picWidthAdjusted3 = picHeightAdjusted3 * imageWidthRatio3;
+    picWidthCalculated3 = picHeightAdjusted3 * imageWidthRatio3;
+    if ( int (picWidthCalculated3) > int (bottomHalfWidth) ) { //Error Catch
+      println("STOP: image 3 width is too big for rectangle layout");
+      exit(); //stop further use of the APP
+    }
   }
   //
   //Rectangular Layout and Image Drawing to CANVAS
@@ -108,14 +133,14 @@ void setup()
   if ( nightMode == false ) tint(tintDayMode, tintDayModeOpacity); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
   if ( nightMode == true ) tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity); //RGB: Night Mode
   //image( pic, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
-  image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightAdjusted1);
+  image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightCalculated1);
   //
 }//End setup
 //
 void draw()
 {
-  image( pic2, topHalfX, topHalfY, picWidthAdjusted2, picHeightAdjusted2 );
-  image( pic3, bottomHalfX, bottomHalfY, picWidthAdjusted3, picHeightAdjusted3 );
+  image( pic2, topHalfX, topHalfY, picWidthAdjusted2, picHeightCalculated2 );
+  image( pic3, bottomHalfX, bottomHalfY, picWidthCalculated3, picHeightAdjusted3 );
 }//End draw
 //
 void keyPressed() {
@@ -128,14 +153,14 @@ void mousePressed() {
     nightMode = false;
     rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
     tint(tintDayMode, tintDayModeOpacity); //Gray Scale: use 1/2 tint value for white (i.e. 128/256=1/2)
-    image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightAdjusted1);
+    image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightCalculated1);
     //
   }
   if (mouseButton == RIGHT) {
     nightMode = true;
     rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
     tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity); //RGB: Night Mode
-    image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightAdjusted1);
+    image( pic1, backgroundImageX, backgroundImageY, picWidthAdjusted1, picHeightCalculated1);
   }
 }//End mousePressed
 //

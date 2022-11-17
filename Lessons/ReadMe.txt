@@ -1,4 +1,11 @@
 
+CAUTION: read the 05 CLean Algorithm first and work backwards
+- breaking variables is a good way to emphasize meaning
+- first time through, single-line-IFs with Booleans
+- second time through, two IF-Else's with Booleans
+- third time throgh, one IF-Else coped with changing alpha numeric values and referenced rect() layout parameters
+
+
 Lessons should begin with flowcharts of larger dimension image stretch and shrinking
 
 
