@@ -66,6 +66,7 @@ void setup()
       exit(); //stop further use of the APP
     }
   } else { //False if Portrait
+    //Students to create
     largerDimension1 = picHeight1;
     smallerDimension1 = picWidth1;
     //
@@ -89,6 +90,7 @@ void setup()
       exit(); //stop further use of the APP
     }
   } else { //False if Portrait
+    //Students to create
     largerDimension2 = picHeight2;
     smallerDimension2 = picWidth2;
     //
@@ -112,6 +114,7 @@ void setup()
       exit(); //stop further use of the APP
     }
   } else { //False if Portrait
+    //Students to create
     largerDimension3 = picHeight3;
     smallerDimension3 = picWidth3;
     //
