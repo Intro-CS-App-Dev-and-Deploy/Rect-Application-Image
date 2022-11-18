@@ -74,14 +74,17 @@ Aspect Ratio retains original presentation of Image
 
 # To Include
 
-Algorithms - Single image
-
-Algorithms - Two images
-
-Algorithms - Dynamic images
-
-Bugs: if ratio is bigger, then good. If ratio is smaller, not good, must be adjusted.
+Single Text Assignment
+- Two Rectangles with text anywhere on the screen
 
 ---
 
-Use Google Questions to have students summarize this code in their own words
+Single Image Assignment
+- Case Study Background Image with tint() & CANVAS divided in half
+- Top Half: single rectangle filled with image by aspect ratio
+- Bottom Half: single rectangle filled with image, no aspect ratio
+- Include night mode switch using keyboard or mouse
+
+Bonus: label with images with "Aspect Ratio" and "No Aspect Ratio"
+
+---
