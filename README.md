@@ -79,6 +79,8 @@ Single Text Assignment
 
 ---
 
+Purpose: begin a new Processing Program and add code as needed
+
 Single Image Assignment
 - Case Study Background Image with tint() & CANVAS divided in half
 - Top Half: single rectangle filled with image by aspect ratio
@@ -97,5 +99,11 @@ Clip Board Checking
 - New Repository & New Processing Program
 - Background and other image downloaded and added to folder (Not mine)
 - Two Rectangles visible, top half and bottom half (or left and right)
+- rectangle layout for text
+- Background Image displayed, tint() working for colour overlays
+- Aspect Image displayed
+- No Aspect Image displayed
+- Text Working and Readable
+- Aspect Ratio Mine or Other
 
 ---
