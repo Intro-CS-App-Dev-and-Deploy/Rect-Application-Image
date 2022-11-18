@@ -2,17 +2,20 @@
 Using rect() to draw an image to the Canvas
 
 ## Questions
-- How do I display images in the canvas
-- How do I retain aspect ratio (image displays the same as the original presentation)
+- How do I display images in the canvas?
+- How do I retain aspect ratio (image displays the same as the original presentation)?
 - What is the arithmetic of aspect ratio?
-- How do I code this into variables
+- How do I code this into variables?
 
 Note: demonstrate Aspect Ratio in WORD with Image Corners and what returns
 
-## Expectations
-- Display an image in a rectangle
-  - Example One: in a canvas
-  - Example Two: in small rectangles in a canvas
+## Expectations: display images in rectangles
+. Lesson: as a background in the CANVAS using tint() to limit colour overlay (in flat program)
+. Lesson: in small rectangles in a canvas
+  - one with aspect ratio
+  - one without aspect ratio
+
+Address issue of design in multiple windows
 
 ## Instructions, Vocabulary, & Explanations (Including URLs and IDE Use)
 - Save an image to the GitHub Project folder (beside your Processing-JAVA app, see exemplars)
