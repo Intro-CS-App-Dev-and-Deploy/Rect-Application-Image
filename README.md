@@ -91,7 +91,7 @@ Ideas for other algorithms
 - similar algorithm to mine, uses >1
 - research about aspect ratio and a different algorithm from the internet
 
-Bonus: label with images with "Aspect Ratio" and "No Aspect Ratio"
+Expectation: label with images with "Aspect Ratio" and "No Aspect Ratio" (using text assignment too)
 
 Clip Board Checking
 - New Repository & New Processing Program
