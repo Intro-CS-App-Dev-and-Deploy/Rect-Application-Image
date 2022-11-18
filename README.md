@@ -85,6 +85,17 @@ Single Image Assignment
 - Bottom Half: single rectangle filled with image, no aspect ratio
 - Include night mode switch using keyboard or mouse
 
+Note: my algorithm takes the larger dimension and calculates the smaller dimension with a <1
+
+Ideas for other algorithms
+- similar algorithm to mine, uses >1
+- research about aspect ratio and a different algorithm from the internet
+
 Bonus: label with images with "Aspect Ratio" and "No Aspect Ratio"
+
+Clip Board Checking
+- New Repository & New Processing Program
+- Background and other image downloaded and added to folder (Not mine)
+- Two Rectangles visible, top half and bottom half (or left and right)
 
 ---
