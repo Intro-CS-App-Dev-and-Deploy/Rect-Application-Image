@@ -77,6 +77,10 @@ Aspect Ratio retains original presentation of Image
 
 # To Include
 
+Algorithm Question
+- Are you using my stretch algorithm, single stretch <1
+- What are other algorithms that are similar?
+
 Single Text Assignment
 - Two Rectangles with text anywhere on the screen
 
