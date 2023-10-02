@@ -135,3 +135,5 @@ The purpose of all lessons is to combine algorithms to answer following question
 CAUTION: final lesson is introduction to procedure with values passing
 
 ---
+
+Changes to nightmode and brightness
